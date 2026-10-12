@@ -20,8 +20,11 @@ a:hover { text-decoration: underline; }
 
 header.top { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .top-row { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.brand { font: 800 20px var(--display); color: var(--text); letter-spacing: -0.3px; }
-.brand span { color: var(--accent); }
+.brand { display: inline-flex; align-items: center; gap: 10px; font: 800 22px var(--display); color: var(--text); letter-spacing: -0.6px; }
+.brand:hover { text-decoration: none; }
+.brand img { display: block; border-radius: 8px; }
+.foot-brand { display: inline-flex; align-items: center; gap: 8px; }
+.foot-brand img { border-radius: 5px; }
 nav.sections { display: flex; gap: 22px; font-weight: 600; font-size: 15px; }
 nav.sections a { color: var(--dim); }
 @media (max-width: 640px) { nav.sections { display: none; } }
