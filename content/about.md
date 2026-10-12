@@ -7,4 +7,4 @@ My work has focused on translating complex technology into customer value—supp
 2016 - 2019: Ridecell - Senior Director Solutions Engineering
 2015 - 2016 TomTom - Senior Director Solutions Engineering
 2007 - 2015:  deCarta (acquired by Uber) | Senior Director Professional Services
-1993 - 2007:  MobileSoft  | CTO founder  (acquired by Zenitel)
+1993 - 2007:  MobileSoft (acquired by Zenitel) | CTO/Founder
