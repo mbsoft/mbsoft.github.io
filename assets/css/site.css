@@ -68,3 +68,14 @@ h2 { font: 800 clamp(26px, 3.6vw, 36px)/1.15 var(--display); letter-spacing: -0.
 
 footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--mute); font-size: 14.5px; }
 footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+/* Bio paragraphs (from content/about.md) and the career timeline */
+#about .lede + .lede { margin-top: -6px; }
+.experience { padding-top: 0; }
+.career { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.career li { position: relative; display: grid; grid-template-columns: 120px 1fr; gap: 4px 20px; padding: 14px 0 14px 24px; }
+.career li::before { content: ""; position: absolute; left: -7px; top: 22px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); }
+.career .years { color: var(--mute); font-weight: 700; font-variant-numeric: tabular-nums; }
+.career .org { font-weight: 800; }
+.career .role { grid-column: 2; color: var(--dim); }
+@media (max-width: 640px) { .career li { grid-template-columns: 1fr; } .career .role { grid-column: 1; } }

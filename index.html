@@ -14,6 +14,7 @@
   <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/about.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -21,6 +22,7 @@
     <div class="wrap top-row">
       <a class="brand" href="#top" aria-label="mbsoft home"><img src="assets/img/logo-mark.svg" width="32" height="32" alt=""><span>mbsoft</span></a>
       <nav class="sections" aria-label="Sections">
+        <a href="#experience">Experience</a>
         <a href="#featured">Featured</a>
         <a href="#routing">Routing</a>
         <a href="#fun">Just for fun</a>
@@ -36,12 +38,22 @@
         <img src="assets/img/portrait.jpg" width="132" height="132" alt="Jim Welch">
         <div>
           <h1>Jim Welch</h1>
-          <p class="lede">I build routing, mapping and AI tools: route optimizers, fleet dashboards, navigation apps, and the occasional fantasy football bot. Here's what I've been working on.</p>
+          <div id="about">
+            <p class="lede">I build routing, mapping and AI tools: route optimizers, fleet dashboards, navigation apps, and the occasional fantasy football bot. Here's what I've been working on.</p>
+          </div>
           <div class="links">
             <a class="btn btn-primary" href="#featured">See the projects</a>
             <a class="btn btn-ghost" href="https://github.com/mbsoft">GitHub profile</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="experience" class="experience" hidden>
+      <div class="wrap">
+        <p class="eyebrow">Experience</p>
+        <h2>Career</h2>
+        <ol id="career" class="career"></ol>
       </div>
     </section>
 
