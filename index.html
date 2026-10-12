@@ -1,72 +1,207 @@
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Aggregate Stats</title>
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic" rel="stylesheet">
-				<style>
-					.hexbin-hexagon {
-						stroke: #000;
-						stroke-width: .5px;
-					}
-					.hexbin-container:hover .hexbin-hexagon {
-						transition: 1200ms;
-						stroke: orange;
-						stroke-width: 6px;
-						stroke-opacity: 1;
-					}
-				
-					.hexbin-tooltip {
-						padding: 8px;
-						border-radius: 4px;
-						border: 1px solid black;
-						background-color: white;
-					}
-					.hexbin-rssi {
-						font-family: 'Courier New', Courier, monospace;
-						font-size: large;
-						color:black;
-					}
-				</style>
-	</head>
-	<body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jim Welch · mbsoft: routing, maps and AI projects</title>
+  <meta name="description" content="Projects by Jim Welch (mbsoft): route optimization and mapping tools, AI assistants like Waterboy, and side projects for fun.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jim Welch · mbsoft">
+  <meta property="og:description" content="Routing, maps and AI projects, including Waterboy, a fantasy football assistant you text over iMessage.">
+  <meta property="og:image" content="https://mbsoft.github.io/assets/img/waterboy.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/profile.jpeg">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="#top">mb<span>soft</span></a>
+      <nav class="sections" aria-label="Sections">
+        <a href="#featured">Featured</a>
+        <a href="#routing">Routing</a>
+        <a href="#fun">Just for fun</a>
+        <a href="#sdk">SDKs</a>
+        <a href="https://github.com/mbsoft">GitHub</a>
+      </nav>
+    </div>
+  </header>
 
-        <div id="gig">
-            <!-- <label style="color: #12117e;font-family: 'Courier New', Courier, monospace;font-weight:bold;font-size:96px">Total Rentals</label><br> -->
-            <span class="countGig" style="color: #9e1d39;font-family: NotoSans,Lucida Grande,Lucida Sans Unicode,sans-serif;;font-weight:bold;font-size:150px"></span><br>
-            <label style="color: #9e1d39;font-family: NotoSans,Lucida Grande,Lucida Sans Unicode,sans-serif;;font-weight:bold;font-size:40px">Darwin</label><span class="countFleet1" style="margin-left:120px; color: #9e1d39;font-family: NotoSans,Lucida Grande,Lucida Sans Unicode,sans-serif;;font-weight:bold;font-size:40px"></span><br>
-            <label style="color: #9e1d39;font-family: NotoSans,Lucida Grande,Lucida Sans Unicode,sans-serif;;font-weight:bold;font-size:40px">Dragon</label><span class="countFleet2" style="margin-left:120px; color: #9e1d39;font-family: NotoSans,Lucida Grande,Lucida Sans Unicode,sans-serif;;font-weight:bold;font-size:40px"></span><br><br>
-			<label style="color: #9e1d39;font-family: NotoSans,Lucida Grande,Lucida Sans Unicode,sans-serif;;font-weight:bold;font-size:18px">Updated</label><span class="updated" style="margin-left:50px; color: #9e1d39;font-family: NotoSans,Lucida Grande,Lucida Sans Unicode,sans-serif;;font-weight:bold;font-size:18px"></span>
-
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <img src="assets/img/profile.jpeg" width="132" height="132" alt="Jim Welch">
+        <div>
+          <h1>Jim Welch</h1>
+          <p class="lede">I build routing, mapping and AI tools: route optimizers, fleet dashboards, navigation apps, and the occasional fantasy football bot. Here's what I've been working on.</p>
+          <div class="links">
+            <a class="btn btn-primary" href="#featured">See the projects</a>
+            <a class="btn btn-ghost" href="https://github.com/mbsoft">GitHub profile</a>
+          </div>
         </div>
-	<script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
-	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-    <script>
-    const DATA_URL = "https://mbsoft.github.io/fleet_stats.json";
+      </div>
+    </section>
 
-    var data = [];
-    var dayData = [];
-    var total = 0;
-    var fleetTotal = [0,0];
-    d3.json(DATA_URL).then(function(d) {
-        data = d.map(d => [d.fleetID, d.stats, d.updated]);
-        var fleetIndex = 0;
-        data.forEach(function(d){
+    <section id="featured">
+      <div class="wrap">
+        <p class="eyebrow">Featured</p>
+        <h2>Waterboy</h2>
+        <p class="section-lede">My current side project, built for fun and to learn.</p>
+        <article class="featured">
+          <a href="https://mbsoft.github.io/waterboy/"><img src="assets/img/waterboy.jpg" width="1200" height="630" alt="Waterboy, a smiling water bottle mascot, next to the words: Your fantasy football assistant, one iMessage away"></a>
+          <div class="body">
+            <div class="tags"><span class="tag">TypeScript</span><span class="tag">Electron</span><span class="tag">Swift</span><span class="tag">Claude / ChatGPT</span><span class="tag live">v0.4</span></div>
+            <h3>A fantasy football assistant you text over iMessage</h3>
+            <p>Waterboy runs on your Mac and answers your league's questions in Messages, using live data from ESPN, Sleeper and nflverse.</p>
+            <ul>
+              <li>Waivers, start/sit, trades and matchup previews, with cards you can screenshot</li>
+              <li>A weekly roundup with playoff odds and awards, plus live alerts when your matchup swings</li>
+              <li>Built for the group chat: everyone's team, one assistant</li>
+            </ul>
+            <div class="links" style="display:flex;gap:12px;flex-wrap:wrap">
+              <a class="btn btn-primary" href="https://mbsoft.github.io/waterboy/">Visit the site</a>
+              <a class="btn btn-ghost" href="https://mbsoft.github.io/waterboy/#demo">Watch the 1-minute demo</a>
+              <a class="btn btn-ghost" href="https://github.com/mbsoft/waterboy">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-            d[1].forEach(function(t) {
-                total += t.rentals;
-                fleetTotal[fleetIndex] += t.rentals;
-                //console.log(total);
-            });
-            fleetIndex++;
-        });
-        console.log(total);
-        d3.select('#gig .countGig').text(total);
-        d3.select('#gig .countFleet1').text(fleetTotal[0]);
-        d3.select('#gig .countFleet2').text(fleetTotal[1]);
-		d3.select('#gig .updated').text(data[0][2]);
-    });
+    <section id="routing">
+      <div class="wrap">
+        <p class="eyebrow">Work</p>
+        <h2>Routing &amp; logistics</h2>
+        <p class="section-lede">Tools for planning routes, fleets and schedules. Most are built on NextBillion.ai's routing and maps APIs.</p>
+        <div class="grid">
+        <article class="card">
+          <h3>Route Planner White Label</h3>
+          <p>A white-label route planner: drag in jobs, shipments and vehicles (CSV or Excel), optimize, and review routes on the map.</p>
+          <div class="tags"><span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Route optimization</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/route-planner-white-label">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>FuelRoute Express</h3>
+          <p>An API that picks the cheapest fuel stops along a long-haul trucking route, from origin, destination and vehicle specs.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">API</span><span class="tag">Spatial queries</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/fuelroute_express">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>MTLL Slot Engine</h3>
+          <p>Finds open time slots in a surveyor's day, checks drive-time between jobs, and ranks the slots to offer a customer. Replaced an Excel workflow.</p>
+          <div class="tags"><span class="tag">TypeScript</span><span class="tag">Next.js</span><span class="tag">Scheduling</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/schedule_finder">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>Route Optimization Iterative Refiner</h3>
+          <p>Upload a route-optimization input and solution, tune the parameters, and refine the plan run by run.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Next.js</span><span class="tag">Optimization</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/mvrp_roir">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>Snap-to-Road Map</h3>
+          <p>Click points on a map and see them snapped to the road network, with each segment and the raw API response to inspect.</p>
+          <div class="tags"><span class="tag">TypeScript</span><span class="tag">MapLibre</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/snaptoroad">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>FieldOps Route Optimizer</h3>
+          <p>An end-to-end field-service demo: generated jobs in major cities, optimized technician routes, and re-optimization when new requests arrive.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Field service</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/field_ops">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>Omnitracs Stop List Dashboard</h3>
+          <p>Parses Omnitracs (Roadnet) stop-list reports from Excel, geocodes the addresses, and turns them into a route dashboard.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Geocoding</span><span class="tag">Excel</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/ohmy_tracks">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>Traffic Incidents Viewer</h3>
+          <p>Live traffic incidents on a map, colour-coded by type, with filters.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Maps SDK</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/traffic_incidents">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>PT Tactical Fleet Sizing</h3>
+          <p>A hosted route-planner report for sizing a fleet.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">Report</span><span class="tag live">Live</span></div>
+          <div class="links"><a href="https://mbsoft.github.io/pt-fleet-sizing/">Live demo →</a><a href="https://github.com/mbsoft/pt-fleet-sizing">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>Terraform: living map scenes</h3>
+          <p>Turns map camera positions into AI-styled “living scenes” you can fly between or orbit in 360°.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">MapLibre</span><span class="tag">Image AI</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/terraform_scene">Code →</a></div>
+        </article>
+        </div>
+      </div>
+    </section>
 
-    </script>
-    
-    </body>
+    <section id="fun">
+      <div class="wrap">
+        <p class="eyebrow">Play</p>
+        <h2>Just for fun</h2>
+        <p class="section-lede">Side projects for family, friends and fans.</p>
+        <div class="grid">
+        <article class="card">
+          <h3>Family Bowl</h3>
+          <p>Super Bowl prop bets for family and friends: everyone submits picks, picks are revealed once they lock, and scores update as results come in.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Next.js</span><span class="tag live">Live</span></div>
+          <div class="links"><a href="https://family-bowl.vercel.app">Live demo →</a><a href="https://github.com/mbsoft/family_bowl">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>Take Me Out to the Ballparks</h3>
+          <p>Plan a 2026 MLB ballpark trip: build an itinerary, see games and ticket prices, and optimize the travel between parks.</p>
+          <div class="tags"><span class="tag">TypeScript</span><span class="tag">Full-stack</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/take_me_out_to_all">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>Pebble Navigation</h3>
+          <p>A Pebble watchapp showing live travel time and distance from where you are to a saved destination, refreshed every minute.</p>
+          <div class="tags"><span class="tag">C</span><span class="tag">Pebble</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/PebbleNav">Code →</a></div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sdk">
+      <div class="wrap">
+        <p class="eyebrow">Developers</p>
+        <h2>SDKs &amp; examples</h2>
+        <p class="section-lede">Sample code for developers getting started with NextBillion.ai.</p>
+        <div class="grid">
+        <article class="card">
+          <h3>NextBillion.ai API Examples</h3>
+          <p>Runnable examples across NextBillion.ai's APIs, with CI and security scans.</p>
+          <div class="tags"><span class="tag">JavaScript</span><span class="tag">Examples</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/nbai_examples">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>NavApp</h3>
+          <p>Turn-by-turn navigation with the NextBillion.ai Navigation SDK on iOS and Android, in a React Native app.</p>
+          <div class="tags"><span class="tag">Swift</span><span class="tag">React Native</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/NavApp">Code →</a></div>
+        </article>
+        <article class="card">
+          <h3>Ionic + NB.ai maps</h3>
+          <p>A sample of NextBillion.ai maps in the Ionic framework.</p>
+          <div class="tags"><span class="tag">Ionic</span><span class="tag">Maps</span></div>
+          <div class="links"><a href="https://github.com/mbsoft/ionicNBAI">Code →</a></div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap row">
+      <span>© 2026 Jim Welch · mbsoft</span>
+      <span><a href="https://github.com/mbsoft">github.com/mbsoft</a></span>
+    </div>
+  </footer>
+</body>
 </html>
