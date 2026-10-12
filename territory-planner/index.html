@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Territory Planner · Balanced sales territories and visit schedules</title>
+  <meta name="description" content="Territory Planner turns a list of points of sale into balanced sales territories, a 4-week visit schedule per rep, and an optimized driving route for any day. Powered by NextBillion.ai.">
+  <meta name="theme-color" content="#070c1c">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Territory Planner: balanced territories, visit schedules and routes">
+  <meta property="og:description" content="Upload your points of sale. Get balanced territories, a 4-week visit schedule per rep, and an optimized route for any day. Powered by NextBillion.ai.">
+  <meta property="og:url" content="https://mbsoft.github.io/territory-planner/">
+  <meta property="og:image" content="https://mbsoft.github.io/territory-planner/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#top" aria-label="Territory Planner home"><img src="assets/img/logo.svg" width="32" height="32" alt=""><span>Territory Planner</span></a>
+    <nav class="sections" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="https://mbsoft.github.io/">mbsoft</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <span class="pill">Powered by NextBillion.ai</span>
+    <h1>Balanced territories. <em>A schedule every rep can keep.</em></h1>
+    <p class="lede">Upload your points of sale. Territory Planner splits them into workload-balanced territories, builds a 4-week visit schedule for each rep, and plans an optimized driving route for any day.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#how">How it works</a>
+      <a class="btn btn-ghost" href="#features">See the features</a>
+    </div>
+    <div class="shot hero-shot"><img src="assets/img/map.jpg" width="1440" height="860" alt="Eight color-coded sales territories across a metro area, with workload stats in the sidebar and a visit-date calendar"></div>
+    <p class="cap">600 stores, 8 territories, every rep-day under the cap. Fictional stores on a real map.</p>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>From a spreadsheet to Monday's route.</h2>
+      <p class="lede2">One upload, one click to build, then refine it on the map.</p>
+      <ol class="steps">
+        <li><h3>Upload</h3><p>Drop in an Excel or CSV file of points of sale: location, visit frequency, service time and allowed days.</p></li>
+        <li><h3>Build</h3><p>The planner sizes the team from the workload, balances the territories and schedules every visit.</p></li>
+        <li><h3>Refine</h3><p>Redraw a territory's outline on the map, then recalculate. Or fix the number of territories yourself.</p></li>
+        <li><h3>Route</h3><p>Pick a territory and a day to get an optimized stop sequence with arrival times.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="feature">
+        <div>
+          <p class="eyebrow">Your data, as it is</p>
+          <h3>Review every point of sale before you plan.</h3>
+          <p>Import .xlsx, .xls or .csv. Visit frequency, service time and allowed days show up as a table you can filter, sample, edit and add to. Problem rows are flagged, not hidden.</p>
+          <ul>
+            <li>Twice a week down to once a month</li>
+            <li>Available and restricted weekdays per store</li>
+            <li>Add a store by typing its address</li>
+          </ul>
+        </div>
+        <div class="shot"><img src="assets/img/review.jpg" width="1440" height="500" alt="The Review POS table with store IDs, seller types, visit frequency, service time and available days" loading="lazy"></div>
+      </div>
+
+      <div class="feature flip">
+        <div>
+          <p class="eyebrow">Balanced by workload</p>
+          <h3>Territories sized by hours, not by count.</h3>
+          <p>Each territory is balanced on weekly workload: service time plus travel, for every visit. Travel estimates are checked against real road distances from NextBillion.ai.</p>
+          <span class="stat">8 territories · 28 to 35 h a week each</span>
+          <p class="note">Know your headcount already? Fix the number of territories and the planner balances the load across them.</p>
+        </div>
+        <div class="shot"><img src="assets/img/balance.jpg" width="750" height="810" alt="Plan stats: 8 territories, 600 stores, 258 weekly hours, busiest rep-day 7.12 of 7.42 hours, and per-territory stores and weekly hours" loading="lazy"></div>
+      </div>
+
+      <div class="feature">
+        <div>
+          <p class="eyebrow">A schedule, not just a map</p>
+          <h3>Four weeks of visits, day by day.</h3>
+          <p>Every visit lands on an allowed day, and every rep-day stays under the daily cap. Hover a territory to see its whole 4-week calendar.</p>
+          <span class="stat ok">2,140 visits in 4 weeks · busiest day 7.12 h of 7.42 h</span>
+        </div>
+        <div class="shot"><img src="assets/img/schedule.jpg" width="780" height="520" alt="A territory's 4-week by Monday to Friday load calendar, every day under the 7.42 hour cap" loading="lazy"></div>
+      </div>
+
+      <div class="feature flip">
+        <div>
+          <p class="eyebrow">Today's route</p>
+          <h3>From the plan to the driving route.</h3>
+          <p>Select one territory and a day, and NextBillion.ai's route optimization orders the stops. You get arrival times, service and drive time, and the route on the map. It honors delivery windows when your file has them.</p>
+          <span class="stat">11 stops · 27.3 km · 49 min driving</span>
+        </div>
+        <div class="shot"><img src="assets/img/route.jpg" width="1200" height="868" alt="An optimized route for one territory on a Tuesday, with numbered stops on the map and a stop table" loading="lazy"></div>
+      </div>
+
+      <p class="eyebrow">Built for the field team</p>
+      <h2>Edit, save and share the plan.</h2>
+      <ol class="steps extras">
+        <li><h3>Redraw</h3><p>Drag a territory's outline. Stores left outside move to the nearest territory.</p></li>
+        <li><h3>Recalculate</h3><p>Re-run the schedule after any edit and see what changed.</p></li>
+        <li><h3>Save</h3><p>Save plans, reopen them later, update or save as new.</p></li>
+        <li><h3>Five languages</h3><p>English, Português, Español, Français and Polski. The API key stays on the server.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Built on NextBillion.ai.</h2>
+      <p class="lede2" style="margin: 0 auto 24px">Maps, distance matrix and route optimization by NextBillion.ai. Territory Planner is an internal tool and isn't publicly available yet.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://nextbillion.ai/">NextBillion.ai</a>
+        <a class="btn btn-ghost" href="https://mbsoft.github.io/">More projects</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span>Territory Planner · Powered by NextBillion.ai</span>
+    <span>Map data © NextBillion.ai · © OpenStreetMap contributors</span>
+    <a href="https://mbsoft.github.io/">← mbsoft.github.io</a>
+  </div>
+</footer>
+</body>
+</html>
