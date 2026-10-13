@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Take Me Out to the Ballparks · Plan your MLB ballpark road trip</title>
+  <meta name="description" content="Plan an MLB ballpark road trip: pick a goal, auto-generate an optimized route across the season's schedule, then drive or fly leg by leg, see it on a map, and share it with one link.">
+  <meta name="theme-color" content="#f7f3ea">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Take Me Out to the Ballparks: plan your MLB ballpark road trip">
+  <meta property="og:description" content="Pick a goal, auto-generate an optimized route through the MLB schedule, drive or fly leg by leg, and share the plan with one link.">
+  <meta property="og:url" content="https://mbsoft.github.io/take-me-out/">
+  <meta property="og:image" content="https://mbsoft.github.io/take-me-out/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="../assets/js/analytics.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#top" aria-label="Take Me Out to the Ballparks home"><img src="assets/img/logo.png" width="46" height="25" alt=""><span>Take Me Out to the Ballparks</span></a>
+    <nav class="sections" aria-label="Sections">
+      <a href="#demo">Demo</a>
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#stack">Under the hood</a>
+      <a href="https://mbsoft.github.io/">mbsoft</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <img class="logo" src="assets/img/logo.png" width="340" height="188" alt="Take Me Out to the Ballparks logo: a vintage baseball inside a red and blue ring, with a small plane circling it">
+    <h1>Thirty ballparks. <em>One road trip.</em></h1>
+    <p class="lede">Pick the parks you want to see. Take Me Out to the Ballparks finds games on the MLB schedule, orders them into a route you can actually drive or fly, and puts the whole trip on a map you can share.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#demo">Watch the demo</a>
+      <a class="btn btn-ghost" href="https://takemeout.mbsoft.com/">Open the app</a>
+      <a class="btn btn-ghost" href="https://github.com/mbsoft/take_me_out_to_all">Code</a>
+    </div>
+    <div class="video" id="demo">
+      <video controls playsinline preload="none" poster="assets/img/poster.jpg">
+        <source src="assets/video/take-me-out-demo.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="assets/video/take-me-out-demo.mp4">Download it</a>.
+      </video>
+    </div>
+    <p class="cap">80 seconds on the live app: a National League road trip from Chicago, start to finish.</p>
+  </div>
+
+  <section id="how">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>From "all 15 NL parks" to a day-by-day plan.</h2>
+      <p class="lede2">Four steps. The planner does the scheduling; you make the calls.</p>
+      <ol class="steps">
+        <li><h3>Pick a goal</h3><p>All 30 ballparks, the American or National League, or your own list of teams. Choose drive, fly, or mixed.</p></li>
+        <li><h3>Auto-generate</h3><p>One click finds a game at every park and orders them into an optimized route through the season.</p></li>
+        <li><h3>Make it yours</h3><p>Swap, lock or reorder games, add stopovers, and set drive or fly for each leg.</p></li>
+        <li><h3>Map and share</h3><p>See every route and flight on the map, then send the plan with a link.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="feature">
+        <div>
+          <p class="eyebrow">Trips</p>
+          <h3>Every trip in one place.</h3>
+          <p>The dashboard lists your itineraries with their goal, travel mode, games and the teams you'll see, plus an estimated trip cost on every card. MLB news and live scores sit alongside.</p>
+          <ul>
+            <li>Cost estimates include driving, flights, hotels, tickets and parking</li>
+            <li>New accounts start with example trips to explore</li>
+          </ul>
+        </div>
+        <div class="shot"><img src="assets/img/dashboard.jpg" width="1600" height="900" alt="The dashboard: itinerary cards with goal, travel mode, team logos and an estimated cost of $10,497 for the demo trip" loading="lazy"></div>
+      </div>
+
+      <div class="feature flip">
+        <div>
+          <p class="eyebrow">New trip</p>
+          <h3>Pick a goal and how you travel.</h3>
+          <p>Name the trip, pick a goal, choose how you'll travel and when you start. Start and end cities are optional, with place search as you type.</p>
+          <ul>
+            <li>Goals: all 30 parks, AL (15), NL (15) or a custom team list</li>
+            <li>Travel: drive, fly, or mixed (flies legs over 500 miles)</li>
+          </ul>
+        </div>
+        <div class="shot"><img src="assets/img/new.jpg" width="1600" height="900" alt="The Create New Itinerary form with trip name, goal set to National League, mixed travel, a start date and Chicago as the start city" loading="lazy"></div>
+      </div>
+
+      <div class="feature">
+        <div>
+          <p class="eyebrow">Auto-generate</p>
+          <h3>One click plans the route.</h3>
+          <p>Auto-generate picks one game at every park on your list and orders them with NextBillion.ai route optimization, respecting game dates and any games you've locked. Regenerate any time for a fresh plan.</p>
+          <span class="stat">NL goal from Chicago: 15 of 15 parks in 50 days</span>
+        </div>
+        <div class="shot"><img src="assets/img/generated.jpg" width="1600" height="900" alt="The Itinerary Generated summary: 15 of 15 parks, 50 days, 7,602 miles, 15 games" loading="lazy"></div>
+      </div>
+
+      <div class="feature flip">
+        <div>
+          <p class="eyebrow">Builder</p>
+          <h3>Drive or fly, leg by leg.</h3>
+          <p>Your itinerary sits next to the full schedule. Filter available games by team, dates or day games only, and add the ones you want. Every leg shows its distance and a drive/fly switch.</p>
+          <ul>
+            <li>Drag to reorder; lock a game so regenerate keeps it</li>
+            <li>Stopovers between any two games</li>
+            <li>Suggested next games, ranked by distance</li>
+          </ul>
+        </div>
+        <div class="shot"><img src="assets/img/builder.jpg" width="1600" height="900" alt="The itinerary builder: available games with filters on the left, the trip with drive and fly switches, leg distances, lock and stopover controls on the right" loading="lazy"></div>
+      </div>
+
+      <div class="feature">
+        <div>
+          <p class="eyebrow">Map</p>
+          <h3>The whole trip on one map.</h3>
+          <p>Map View draws driving routes on a NextBillion.ai basemap and flights as arcs with small plane markers, numbered in trip order next to a travel itinerary panel. Totals show the driving and flying split.</p>
+          <span class="stat">2,507 mi driving (~42 h) · 4,279 mi flying (~10 h)</span>
+        </div>
+        <div class="shot"><img src="assets/img/map.jpg" width="1600" height="900" alt="Map View: numbered ballparks across the US connected by driving routes and flight arcs, with driving and air totals and the trip list beside the map" loading="lazy"></div>
+      </div>
+
+      <div class="feature flip">
+        <div>
+          <p class="eyebrow">Game day</p>
+          <h3>Notes and photos for every game.</h3>
+          <p>Open any game for its ballpark, date and first pitch. Keep notes (parking, food, who you're meeting), upload photos from the day, and lock the game in place. Ticket prices come from SeatGeek when there are listings.</p>
+        </div>
+        <div class="shot"><img src="assets/img/gamedetail.jpg" width="1600" height="900" alt="The Game Details panel for Rockies at Cardinals: Lock Game, ticket prices, notes and photos" loading="lazy"></div>
+      </div>
+
+      <div class="feature">
+        <div>
+          <p class="eyebrow">Share</p>
+          <h3>Send the plan with one link.</h3>
+          <p>Share creates a public link to a read-only view of the trip, with the list and the map. Whoever opens it doesn't need an account. Turn the link off whenever you like.</p>
+        </div>
+        <div class="shot"><img src="assets/img/share.jpg" width="1600" height="900" alt="The public share view of the demo trip, opened without signing in, with List and Map tabs" loading="lazy"></div>
+      </div>
+
+      <div class="feature flip">
+        <div>
+          <p class="eyebrow">Scorecard</p>
+          <h3>Track the parks you've visited.</h3>
+          <p>The profile keeps a ballpark scorecard of every park you've been to, separate from your trips. It also handles your account: password changes and self-service account deletion.</p>
+        </div>
+        <div class="shot"><img src="assets/img/scorecard.jpg" width="1600" height="900" alt="The Ballpark Scorecard: 7 of 30 ballparks visited, with each team's ballpark as a card" loading="lazy"></div>
+      </div>
+
+      <div class="feature">
+        <div>
+          <p class="eyebrow">Admin</p>
+          <h3>A console for running the site.</h3>
+          <p>Admins get a separate console with users, all itineraries, and templates: example trips seeded into every new account. Any trip can be saved as a template.</p>
+          <ul>
+            <li>Monitoring: calls, response times and errors per external API</li>
+            <li>Usage stats: goals, popular teams, games per trip</li>
+            <li>Service details for the Cloud Run deployment</li>
+          </ul>
+        </div>
+        <div class="shot"><img src="assets/img/monitoring-app.jpg" width="1600" height="900" alt="Admin monitoring: total users, itineraries, average games per itinerary, goal distribution and popular teams" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="wrap">
+      <p class="eyebrow">Under the hood</p>
+      <h2>Built with</h2>
+      <table class="stack">
+        <tr><th>App</th><td>Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, shadcn/ui</td></tr>
+        <tr><th>Routing and maps</th><td>NextBillion.ai route optimization, directions, place search and map tiles; MapLibre GL</td></tr>
+        <tr><th>Data</th><td>Supabase (PostgreSQL and photo storage), with the full MLB season schedule</td></tr>
+        <tr><th>Accounts</th><td>NextAuth.js: email and password with verification, or Google sign-in</td></tr>
+        <tr><th>Integrations</th><td>SeatGeek ticket prices, Resend email</td></tr>
+        <tr><th>Hosting</th><td>Google Cloud Run, Terraform, Cloud Build; tests with Vitest</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Plan your own trip.</h2>
+      <p class="lede2">Free to use. Sign up with email or Google, and start from one of the example trips.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://takemeout.mbsoft.com/">Open the app</a>
+        <a class="btn btn-ghost" href="https://github.com/mbsoft/take_me_out_to_all">View the code</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span>Take Me Out to the Ballparks · Routing by NextBillion.ai</span>
+    <span>Map data © NextBillion.ai · © OpenStreetMap contributors. Not affiliated with MLB.</span>
+    <a href="https://mbsoft.github.io/">← mbsoft.github.io</a>
+  </div>
+</footer>
+</body>
+</html>
