@@ -53,6 +53,7 @@ h2 { font: 800 clamp(26px, 3.6vw, 36px)/1.15 var(--display); letter-spacing: -0.
 .featured + .featured { margin-top: 28px; }
 .featured-runestone > a { background: #0b0f17; }
 .featured-tp > a { background: #070c1c; }
+.featured-tmo > a { background: #081226; }
 .featured img { width: 100%; height: auto; display: block; }
 .featured .body { padding: clamp(22px, 3.5vw, 38px); }
 .featured h3 { font: 800 30px var(--display); margin: 6px 0 10px; letter-spacing: -0.6px; }
