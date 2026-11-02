@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support — ErgSoft</title><meta name="description" content="ErgSoft support: supported machines, Apple Watch heart rate, console pairing, Apple Health."><link rel="icon" href="/ergsoft/icon.png"><style>
+:root{color-scheme:light dark;--bg:#fff;--fg:#1b1f23;--muted:#5b6670;--link:#1e6fd9;--card:#f4f6f8}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1418;--fg:#e8ecef;--muted:#9aa6b1;--link:#6cb0ff;--card:#182027}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 20px 80px}header{display:flex;align-items:center;gap:14px;margin-bottom:28px}
+header img{width:56px;height:56px;border-radius:13px}header h1{font-size:28px;margin:0}header p{margin:0;color:var(--muted);font-size:15px}
+h2{font-size:20px;margin:32px 0 8px}p,li{margin:8px 0}a{color:var(--link)}ul{padding-left:22px}
+.meta{color:var(--muted);font-size:14px}nav a{margin-right:16px;font-size:15px}
+.card{background:var(--card);border-radius:12px;padding:16px 20px;margin:16px 0}footer{margin-top:48px;color:var(--muted);font-size:14px}
+</style></head>
+<body><main>
+<header><img src="/ergsoft/icon.png" alt=""><div><h1>ErgSoft</h1><p>Open-source training app for Bluetooth rowers and bike ergs</p></div></header>
+<nav><a href="/ergsoft/">Overview</a><a href="/ergsoft/support/">Support</a><a href="/ergsoft/privacy/">Privacy</a><a href="https://github.com/mbsoft/ergsoft">GitHub</a></nav>
+<h1 style="font-size:24px;margin-top:28px">Support</h1>
+<p>Questions, bugs and feature requests: open an issue on <a href="https://github.com/mbsoft/ergsoft/issues">GitHub</a> or email <a href="mailto:jwelch@mbsoft.com?subject=ErgSoft%20support">jwelch@mbsoft.com</a>. Include the diagnostics text from Settings → About → Copy diagnostics if the problem is device-related.</p>
+<h2>Supported machines</h2>
+<p>Any rower or bike that advertises the Bluetooth <strong>Fitness Machine Service (FTMS)</strong>, including the Rogue Echo Rower and Echo Bike. Bluetooth heart-rate straps and armbands using the standard Heart Rate Service are supported.</p>
+<h2>Common questions</h2>
+<div class="card"><strong>The machine doesn't appear in Devices → Scan.</strong><br>Wake the console so it advertises, make sure no other app (including the manufacturer's) is already connected to it, and tap Scan again. Only one app can be connected to the console at a time.</div>
+<div class="card"><strong>No heart rate from my Apple Watch.</strong><br>Open ErgSoft on the watch and tap Start (or use the "Start erg session" Shortcut, which launches both). The watch must be unlocked and on your wrist. Any watch workout — including Apple's Workout app — also feeds heart rate to the phone through Apple Health with a few seconds of delay, if Health → Data Access → ErgSoft → Heart Rate is allowed.</div>
+<div class="card"><strong>Showing heart rate on the erg console.</strong><br>Devices → "Send HR to erg console", then on the console choose <em>Connect → Connect Heart Rate</em> and pick <em>ErgSoft HR</em>. Keep ErgSoft on screen while pairing.</div>
+<div class="card"><strong>Workouts aren't in Apple Health.</strong><br>Settings → Health → Data Access &amp; Devices → ErgSoft → allow Workouts and Heart Rate. Sessions finished before permission was granted can't be back-filled.</div>
+<h2>Source code</h2>
+<p>ErgSoft is free software, licensed under the GNU GPL v3. The source is at <a href="https://github.com/mbsoft/ergsoft">github.com/mbsoft/ergsoft</a>.</p>
+<footer>© 2026 Jim Welch · mbsoft · <a href="mailto:jwelch@mbsoft.com">jwelch@mbsoft.com</a></footer>
+</main></body></html>
